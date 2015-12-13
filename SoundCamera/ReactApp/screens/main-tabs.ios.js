@@ -18,6 +18,7 @@
 
   // Screens / Pages
   var ComingSoon = require('./soon.ios');
+  var Camera = require('./camera.ios');
 
   var {
     StyleSheet,
@@ -56,7 +57,7 @@ var TabBarItemIOS = TabBarIOS.Item;
                 selectedTab: 'camera',
               });
             }}>
-            <ComingSoon navigator={this.props.navigator} placeholder={"This could be whatever youd like..."} />
+            <Camera></Camera>
           </TabBarItemIOS>
 
           <TabBarItemIOS
