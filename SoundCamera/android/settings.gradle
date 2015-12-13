@@ -1,0 +1,3 @@
+rootProject.name = 'SoundCamera'
+
+include ':app'
