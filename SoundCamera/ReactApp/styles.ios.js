@@ -251,7 +251,7 @@
 	  /* Nav Bar */
 	  navbar: {
 	    backgroundColor: AppConfig.primaryColor,
-	    borderBottomWidth: 1,
+	    borderBottomWidth: 0,
 	    borderBottomColor: AppConfig.subtleGreyBorder,
 	  },
     navbar_button: {

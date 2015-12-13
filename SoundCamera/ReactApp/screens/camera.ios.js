@@ -1,5 +1,6 @@
 var React = require('react-native');
 var { StyleSheet, requireNativeComponent, PropTypes, NativeModules, DeviceEventEmitter } = React;
+var Dimensions = require('Dimensions');
 
 var CAMERA_REF = 'camera';
 
@@ -195,7 +196,7 @@ var Camera = React.createClass({
 var RCTCamera = requireNativeComponent('RCTCamera', Camera);
 
 var styles = StyleSheet.create({
-  base: { },
+  base: {height:Dimensions.get('window').height}
 });
 
 Camera.constants = constants;

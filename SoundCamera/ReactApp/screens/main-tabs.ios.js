@@ -39,7 +39,7 @@ var TabBarItemIOS = TabBarIOS.Item;
     constructor(props) {
       super(props);
       this.state = {
-        selectedTab: 'favourites'
+        selectedTab: 'camera'
       }
     }
     /**
