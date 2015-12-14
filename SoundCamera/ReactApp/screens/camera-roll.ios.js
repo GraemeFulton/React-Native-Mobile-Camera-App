@@ -40,10 +40,14 @@ const reactImageProject = React.createClass({
         };
     },
     componentWillReceiveProps: function(nextProps) {
-
-        if(nextProps.reload=='true'){
+        this.state.reload=nextProps
+        if(this.state.reload=='true'){
            this.componentDidMount()
         }
+
+    },
+    componentWillUnmount: function() {
+        this.state.reload='false'
 
     },
     componentDidMount:function() {

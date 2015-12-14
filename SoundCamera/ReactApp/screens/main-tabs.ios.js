@@ -33,7 +33,6 @@ var TabBarItemIOS = TabBarIOS.Item;
   View
   =============================== */
   class Tabbar extends Component {
-
     /**
       * Setup Default State Values
       */
@@ -67,6 +66,7 @@ var TabBarItemIOS = TabBarIOS.Item;
             title="Stream"
             icon={require('../../images/icons/ios7-albums-outline.png')}
             onPress={() => {
+
               this.setState({
                 selectedTab: 'stream',
                 reload:'true'
