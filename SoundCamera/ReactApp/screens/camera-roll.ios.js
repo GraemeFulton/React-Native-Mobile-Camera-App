@@ -39,13 +39,13 @@ const reactImageProject = React.createClass({
     },
     componentWillReceiveProps: function(nextProps) {
       if(this.props.reload!=='false'){
-  
+
           this.componentDidMount()
       }
     },
     componentDidMount() {
         const fetchParams = {
-            first: 25,
+            first: 24,
         };
         CameraRoll.getPhotos(fetchParams, this.storeImages, this.logImageError);
     },
