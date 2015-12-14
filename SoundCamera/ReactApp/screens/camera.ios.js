@@ -108,7 +108,6 @@ var cameraApp = React.createClass({
       console.log(err, data);
     });
     this.setState({flash: 0.5})
-    var that=this;
 
     setTimeout(function(){
       this.setState({flash: 1})

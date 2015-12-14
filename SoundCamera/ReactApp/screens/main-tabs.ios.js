@@ -72,7 +72,7 @@ var TabBarItemIOS = TabBarIOS.Item;
                 reload:'true'
               });
             }}>
-            <CameraRoll reload={this.state.reload}></CameraRoll>
+            <CameraRoll navigator={this.props.navigator} reload={this.state.reload}></CameraRoll>
           </TabBarItemIOS>
 
           <TabBarItemIOS

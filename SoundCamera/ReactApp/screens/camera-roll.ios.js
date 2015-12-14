@@ -11,6 +11,8 @@ const {
     TouchableHighlight,
     NativeModules,
 } = React;
+var SingleImageView = require('./single-image-view.ios');
+
 
 const styles = StyleSheet.create({
     container: {
@@ -38,19 +40,20 @@ const reactImageProject = React.createClass({
         };
     },
     componentWillReceiveProps: function(nextProps) {
-      if(this.props.reload!=='false'){
 
-          this.componentDidMount()
-      }
+        if(nextProps.reload=='true'){
+           this.componentDidMount()
+        }
+
     },
-    componentDidMount() {
+    componentDidMount:function() {
         const fetchParams = {
             first: 24,
         };
         CameraRoll.getPhotos(fetchParams, this.storeImages, this.logImageError);
     },
 
-    storeImages(data) {
+    storeImages:function(data) {
         const assets = data.edges;
         const images = assets.map((asset) => asset.node.image);
         this.setState({
@@ -58,17 +61,29 @@ const reactImageProject = React.createClass({
         });
     },
 
-    logImageError(err) {
+    logImageError:function(err) {
         console.log(err);
     },
 
-    selectImage(uri) {
+    selectImage:function(uri) {
         NativeModules.ReadImageData.readImage(uri, (image) => {
             this.setState({
                 selected: image,
             });
-            console.log(image);
+            this.navigate(uri)
         });
+    },
+    /**
+      * Navigates to page from menu
+      */
+    navigate: function(image) {
+      //console.log(image)
+      this.props.navigator.push({
+        title: image.title,
+        component: SingleImageView,
+        index: 2,
+        image:image
+      });
     },
 
     render() {
