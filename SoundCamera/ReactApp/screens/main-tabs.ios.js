@@ -19,6 +19,7 @@
   // Screens / Pages
   var ComingSoon = require('./soon.ios');
   var Camera = require('./camera.ios');
+  var CameraRoll = require('./camera-roll.ios');
 
   var {
     StyleSheet,
@@ -39,7 +40,8 @@ var TabBarItemIOS = TabBarIOS.Item;
     constructor(props) {
       super(props);
       this.state = {
-        selectedTab: 'camera'
+        selectedTab: 'camera',
+        reload:'false'
       }
     }
     /**
@@ -67,9 +69,10 @@ var TabBarItemIOS = TabBarIOS.Item;
             onPress={() => {
               this.setState({
                 selectedTab: 'stream',
+                reload:'true'
               });
             }}>
-            <ComingSoon navigator={this.props.navigator} placeholder={"This could be a screen listing contacts..."} />
+            <CameraRoll reload={this.state.reload}></CameraRoll>
           </TabBarItemIOS>
 
           <TabBarItemIOS
