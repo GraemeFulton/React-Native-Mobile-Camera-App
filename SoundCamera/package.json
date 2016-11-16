@@ -12,5 +12,8 @@
     "react-native-navbar": "^0.8.2",
     "react-native-side-menu": "^0.14.2",
     "tcomb-form-native": "^0.3.0"
+  },
+  "devDependencies": {
+    "react-native-cli": "^1.2.0"
   }
 }
