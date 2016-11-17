@@ -10,3 +10,18 @@ The idea for this project was to create a camera app, where the camera screen ge
 * Created based on the [React Native Starter Kit](https://github.com/mcnamee/react-native-starter-app)
 * Added camera and photo screens, so uses iOS permissions to access camera and photo library
 
+Here is a preview of what it does so far:
+
+* Load the app from iOS device
+
+![](https://github.com/GraemeFulton/React-Native-Mobile-Camera-App/blob/master/docs/soundcam1.gif)
+
+
+* Navigate using the bottom navigation, or the dreaded hamburger menu 
+
+![](https://github.com/GraemeFulton/React-Native-Mobile-Camera-App/blob/master/docs/soundcam2.gif)
+
+
+* Take pictures and access them from the camera roll
+
+![](https://github.com/GraemeFulton/React-Native-Mobile-Camera-App/blob/master/docs/soundcam3.gif?raw=true)
